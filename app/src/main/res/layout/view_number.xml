@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="lineNumber"
+            type="com.web0zz.periodic_table_of_mendeleev.data.model.Number" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        customHeight="@{lineNumber.isRow ? @dimen/row_number_height : @dimen/column_number_height}"
+        customWidth="@{lineNumber.isRow ? @dimen/row_number_width : @dimen/column_number_with}"
+        android:layout_width="35dp"
+        android:layout_height="75dp"
+        android:background="@color/light_background">
+
+        <TextView
+            android:id="@+id/lineNumber_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{lineNumber.number}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/number_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="8" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

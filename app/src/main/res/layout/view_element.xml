@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="element"
+            type="com.web0zz.periodic_table_of_mendeleev.data.model.Element" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        backgroundColorId="@{element.colorBackground}"
+        android:layout_width="@dimen/box_width"
+        android:layout_height="@dimen/box_height"
+        android:onClick="@{() -> element.onClick() }"
+        android:visibility="@{element.isVisible() ? View.VISIBLE : View.GONE}"
+        tools:background="@color/light_background">
+
+        <TextView
+            android:id="@+id/element_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="@{element.number}"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="30" />
+
+        <TextView
+            android:id="@+id/textView"
+            textColorId="@{element.colorText}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{element.title}"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Zn" />
+
+        <TextView
+            android:id="@+id/element_long_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{element.longTitle}"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:text="Zinc" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
