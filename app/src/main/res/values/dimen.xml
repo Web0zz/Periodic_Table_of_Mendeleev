@@ -19,6 +19,8 @@
 
     <dimen name="button_min_size">48dp</dimen>
 
+    <dimen name="recycler_height">0dp</dimen>
+
     <!--Text Size Dimen-->
     <dimen name="number_size">18sp</dimen>
     <dimen name="small_element_number_text">11sp</dimen>
