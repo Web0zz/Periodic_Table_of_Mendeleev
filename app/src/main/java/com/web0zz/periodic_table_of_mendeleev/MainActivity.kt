@@ -42,7 +42,12 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         return super.onCreateOptionsMenu(menu)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem) = when(item.itemId) {
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.show_by_name -> {
+            homeFragment.elementControl.displayElementsBySelectedProperties(DisplayType.NAME)
+            true
+        }
+
         R.id.show_by_chemical -> {
             homeFragment.elementControl.displayElementsBySelectedProperties(DisplayType.CHEMICAL_GROUP)
             true

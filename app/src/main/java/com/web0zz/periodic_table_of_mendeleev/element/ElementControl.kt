@@ -5,6 +5,7 @@ import com.web0zz.periodic_table_of_mendeleev.data.model.Element
 import com.web0zz.periodic_table_of_mendeleev.data.model.Item
 import com.web0zz.periodic_table_of_mendeleev.element.DisplayType.*
 import com.web0zz.periodic_table_of_mendeleev.element.ElementViewStyle.displayByChemicalGroupBlock
+import com.web0zz.periodic_table_of_mendeleev.element.ElementViewStyle.displayByName
 import com.web0zz.periodic_table_of_mendeleev.element.ElementViewStyle.displayByStandardStateStyle
 
 abstract class ElementControl(private val adapter: RecyclerAdapter) {
@@ -15,6 +16,7 @@ abstract class ElementControl(private val adapter: RecyclerAdapter) {
         when (displayType) {
             CHEMICAL_GROUP -> elements.forEach { displayByChemicalGroupBlock(it) }
             STANDARD_STATE -> elements.forEach { displayByStandardStateStyle(it) }
+            NAME -> elements.forEach { displayByName(it) }
         }
 
         notifyElementDataChanged()

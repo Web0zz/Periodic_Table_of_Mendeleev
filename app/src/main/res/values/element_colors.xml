@@ -39,6 +39,4 @@
     <color name="state_background_solid">#AFB1B1</color>
     <color name="state_background_liquid">#FD5555</color>
     <!---->
-
-    <color name="generate_color_default">#00CFB0</color>
 </resources>

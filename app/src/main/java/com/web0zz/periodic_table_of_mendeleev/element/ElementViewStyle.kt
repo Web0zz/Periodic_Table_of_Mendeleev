@@ -79,4 +79,8 @@ object ElementViewStyle {
 
         element.colorText = R.color.default_element_text
     }
+
+    fun displayByName(element: Element) {
+        element.contentText = element.title
+    }
 }

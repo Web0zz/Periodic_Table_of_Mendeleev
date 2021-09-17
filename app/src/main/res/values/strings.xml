@@ -15,4 +15,5 @@
     <string name="close_expanded_detail">Close Expanded Detail</string>
     <string name="periodic_table">Periodic Table</string>
     <string name="chemical_group_blocks">Chemical Group Blocks</string>
+    <string name="element_name">Element Name</string>
 </resources>

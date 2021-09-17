@@ -3,12 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/show_by_name"
+        android:title="@string/element_name"
+        app:showAsAction="collapseActionView" />
+
+    <item
         android:id="@+id/show_by_chemical"
         android:title="@string/chemical_group_blocks"
-        app:showAsAction="collapseActionView"/>
+        app:showAsAction="collapseActionView" />
 
     <item
         android:id="@+id/show_by_standard"
         android:title="@string/standard_state"
-        app:showAsAction="collapseActionView"/>
+        app:showAsAction="collapseActionView" />
 </menu>

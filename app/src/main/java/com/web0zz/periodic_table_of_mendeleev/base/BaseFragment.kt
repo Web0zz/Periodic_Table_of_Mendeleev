@@ -18,7 +18,7 @@ abstract class BaseFragment<B : ViewDataBinding> : Fragment() {
 
     open fun initUi() {}
     open fun resumeUi() {}
-    open fun stopUi() { }
+    open fun stopUi() {}
 
     override fun onCreateView(
         inflater: LayoutInflater,
