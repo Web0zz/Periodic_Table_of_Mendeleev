@@ -1,10 +1,7 @@
 package com.web0zz.periodic_table_of_mendeleev.screen.detail
 
 import android.os.Bundle
-import android.view.Gravity
 import android.view.View
-import android.view.ViewGroup
-import android.view.Window
 import androidx.core.view.isVisible
 import com.web0zz.periodic_table_of_mendeleev.R
 import com.web0zz.periodic_table_of_mendeleev.base.BaseCustomDialog

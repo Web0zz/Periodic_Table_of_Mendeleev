@@ -1,6 +1,5 @@
 package com.web0zz.periodic_table_of_mendeleev.screen.home
 
-import android.app.ActionBar
 import android.view.animation.AnimationUtils
 import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.StaggeredGridLayoutManager

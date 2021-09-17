@@ -11,10 +11,8 @@
     <string name="electron_affinity">Electron Affinity</string>
     <string name="melting_point">Melting Point</string>
     <string name="boiling_point">Boiling Point</string>
-    <string name="year_discovered">Year Discovered</string>
     <string name="density">Density</string>
     <string name="close_expanded_detail">Close Expanded Detail</string>
     <string name="periodic_table">Periodic Table</string>
     <string name="chemical_group_blocks">Chemical Group Blocks</string>
-    <string name="display">Display</string>
 </resources>
