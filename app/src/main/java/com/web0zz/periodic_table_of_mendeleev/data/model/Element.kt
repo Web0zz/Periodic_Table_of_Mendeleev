@@ -18,15 +18,10 @@ data class Element(
     val density: String? = "",
     val atomicRadius: String? = "",
     val yearDiscovered: String? = "",
+    var position: Int = 0,
+    var colorBackground: Int = R.color.light_background,
+    var colorText: Int = R.color.white,
+    var contentText: String = title,
 ) : Item() {
     override fun getType() = Type.ELEMENT.ordinal
-
-    var position: Int = 0
-
-    var colorBackground: Int = R.color.black_background
-    var colorText: Int = R.color.white
-
-    fun setPositionByAdapter(p: Int) {
-        position = p
-    }
 }

@@ -6,17 +6,20 @@ import com.web0zz.periodic_table_of_mendeleev.R
 import com.web0zz.periodic_table_of_mendeleev.base.BaseFragment
 import com.web0zz.periodic_table_of_mendeleev.databinding.FragmentSplashBinding
 
+
 class SplashFragment : BaseFragment<FragmentSplashBinding>() {
     override fun getLayoutId() = R.layout.fragment_splash
 
-    override fun initUi() {
-        val mainActivity = (requireActivity() as MainActivity)
+    override fun resumeUi() = (requireActivity() as MainActivity).supportActionBar!!.hide()
 
-        object : CountDownTimer(3150, 1000) {
+    override fun stopUi() = (requireActivity() as MainActivity).supportActionBar!!.show()
+
+    override fun initUi() {
+        object : CountDownTimer(3000, 1000) {
             override fun onTick(p0: Long) {}
 
             override fun onFinish() {
-                mainActivity.initHome()
+                (requireActivity() as MainActivity).initHome()
             }
         }.start()
     }

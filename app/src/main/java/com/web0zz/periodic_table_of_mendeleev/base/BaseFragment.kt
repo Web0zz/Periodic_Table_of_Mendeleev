@@ -17,6 +17,8 @@ abstract class BaseFragment<B : ViewDataBinding> : Fragment() {
     abstract fun getLayoutId(): Int
 
     open fun initUi() {}
+    open fun resumeUi() {}
+    open fun stopUi() {}
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,6 +33,16 @@ abstract class BaseFragment<B : ViewDataBinding> : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initUi()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        resumeUi()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        stopUi()
     }
 
     override fun onDestroyView() {

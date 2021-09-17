@@ -21,6 +21,7 @@
 
         <TextView
             android:id="@+id/element_number_textView"
+            textColorId="@{element.colorText}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/small_element_number_margin"
@@ -28,7 +29,8 @@
             android:textSize="@dimen/small_element_number_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="30" />
+            tools:text="30"
+            tools:textColor="@color/white" />
 
         <TextView
             android:id="@+id/symbol_textView"
@@ -41,17 +43,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Zn" />
+            tools:text="Zn"
+            tools:textColor="@color/white" />
 
         <TextView
-            android:id="@+id/element_long_title_textView"
+            android:id="@+id/element_content_textView"
+            textColorId="@{element.colorText}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{element.title}"
+            android:text="@{element.contentText}"
             android:textSize="@dimen/small_element_title_text"
             app:layout_constraintEnd_toEndOf="@+id/symbol_textView"
             app:layout_constraintStart_toStartOf="@+id/symbol_textView"
             app:layout_constraintTop_toBottomOf="@+id/symbol_textView"
-            tools:text="Zinc" />
+            tools:text="Zinc"
+            tools:textColor="@color/white" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

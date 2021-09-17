@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.web0zz.periodic_table_of_mendeleev.databinding.ViewEmptyBinding
 
 class EmptyViewHolder(binding: ViewEmptyBinding) : RecyclerView.ViewHolder(binding.root) {
-    fun bind() { }
+    fun bind() {}
 
     companion object {
         fun create(parent: ViewGroup): EmptyViewHolder {

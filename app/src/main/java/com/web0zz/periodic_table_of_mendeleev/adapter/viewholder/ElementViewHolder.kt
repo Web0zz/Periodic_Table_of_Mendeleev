@@ -19,7 +19,7 @@ class ElementViewHolder(
 
     fun bind(element: Element, position: Int) {
         binding.element = element
-        element.setPositionByAdapter(position)
+        element.position = position
     }
 
     companion object {

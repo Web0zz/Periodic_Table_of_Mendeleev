@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--Layout Size Dimen-->
-    <dimen name="splash_layout_size">200dp</dimen>
+    <dimen name="splash_layout_size">250dp</dimen>
 
     <dimen name="row_number_width">30dp</dimen>
     <dimen name="row_number_height">70dp</dimen>

@@ -6,7 +6,6 @@ import com.web0zz.periodic_table_of_mendeleev.adapter.viewholder.ElementViewHold
 import com.web0zz.periodic_table_of_mendeleev.adapter.viewholder.EmptyViewHolder
 import com.web0zz.periodic_table_of_mendeleev.adapter.viewholder.NumberViewHolder
 import com.web0zz.periodic_table_of_mendeleev.data.model.Element
-import com.web0zz.periodic_table_of_mendeleev.data.model.Empty
 import com.web0zz.periodic_table_of_mendeleev.data.model.Item
 import com.web0zz.periodic_table_of_mendeleev.data.model.Item.Type.*
 import com.web0zz.periodic_table_of_mendeleev.data.model.Number
