@@ -11,16 +11,18 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        customHeight="@{lineNumber.isRow ? @dimen/row_number_height : @dimen/column_number_height}"
-        customWidth="@{lineNumber.isRow ? @dimen/row_number_width : @dimen/column_number_with}"
-        android:layout_width="@dimen/row_number_width"
-        android:layout_height="@dimen/row_number_height"
-        android:background="@color/transparent_light_background">
+        android:layout_width="@dimen/box_width"
+        android:layout_height="@dimen/box_height"
+        android:background="@color/transparent_background">
 
         <TextView
             android:id="@+id/lineNumber_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            customHeight="@{lineNumber.isRow ? @dimen/row_number_height : @dimen/column_number_height}"
+            customWidth="@{lineNumber.isRow ? @dimen/row_number_width : @dimen/column_number_with}"
+            android:layout_width="@dimen/row_number_width"
+            android:layout_height="@dimen/column_number_with"
+            android:background="@color/transparent_light_background"
+            android:gravity="center"
             android:text="@{lineNumber.number}"
             android:textColor="@color/white"
             android:textSize="@dimen/number_size"
@@ -28,6 +30,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="8" />
+            tools:text="8"
+            tools:textColor="@color/white" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

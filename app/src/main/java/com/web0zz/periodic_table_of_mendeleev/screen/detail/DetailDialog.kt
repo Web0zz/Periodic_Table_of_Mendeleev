@@ -27,15 +27,6 @@ class DetailDialog : BaseCustomDialog<FragmentPopupDetailBinding>() {
         getElement()
     }
 
-    override fun setWindow() {
-        val window: Window? = dialog!!.window
-        window?.let {
-            it.setGravity(Gravity.CENTER)
-            it.setLayout(resources.getDimension(R.dimen.detail_width).toInt(),
-                ViewGroup.LayoutParams.WRAP_CONTENT)
-        }
-    }
-
     override fun initUi() {
         dialogDataBinding.element = selectedElement
         dialogDataBinding.myInterface = this

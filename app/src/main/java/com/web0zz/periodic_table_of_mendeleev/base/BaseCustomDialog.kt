@@ -17,8 +17,6 @@ abstract class BaseCustomDialog<B : ViewDataBinding> : DialogFragment() {
 
     open fun Bundle.getArgumentsToVariable() {}
 
-    open fun setWindow() {}
-
     open fun initUi() {}
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,11 +38,6 @@ abstract class BaseCustomDialog<B : ViewDataBinding> : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initUi()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        setWindow()
     }
 
     override fun onDestroyView() {

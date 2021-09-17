@@ -52,11 +52,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{element.contentText}"
+            android:textAlignment="center"
             android:textSize="@dimen/small_element_title_text"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/symbol_textView"
             app:layout_constraintStart_toStartOf="@+id/symbol_textView"
             app:layout_constraintTop_toBottomOf="@+id/symbol_textView"
-            tools:text="Zinc"
+            tools:text="Post-Transition Metal"
             tools:textColor="@color/white" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

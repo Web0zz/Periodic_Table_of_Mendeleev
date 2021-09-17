@@ -1,9 +1,8 @@
 package com.web0zz.periodic_table_of_mendeleev.screen.home
 
-import android.os.CountDownTimer
+import android.app.ActionBar
 import android.view.animation.AnimationUtils
 import androidx.core.os.bundleOf
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.web0zz.periodic_table_of_mendeleev.R
 import com.web0zz.periodic_table_of_mendeleev.adapter.RecyclerAdapter
@@ -24,29 +23,18 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override fun initUi() {
         val data = DummyData
 
-        fragmentDataBinding.rowNumberRecyclerView.apply {
-            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-            animation = AnimationUtils.loadAnimation(context, R.anim.row_anim)
-            adapter = RecyclerAdapter(data.rowNumber) { }
-        }
-
         fragmentDataBinding.periodicTableRecyclerView.apply {
             layoutManager = StaggeredGridLayoutManager(10, StaggeredGridLayoutManager.HORIZONTAL)
             animation = AnimationUtils.loadAnimation(context, R.anim.recyclerview_anim)
             adapter = RecyclerAdapter(data.listAdapter) { element ->
                 onClickElement(element)
             }.apply { recyclerAdapter = this }
+            setHasFixedSize(true)
         }
 
-        elementControl = object : ElementControl(recyclerAdapter, requireContext()) {}
+        elementControl = object : ElementControl(recyclerAdapter) {}
 
-        object : CountDownTimer(10000, 1000) {
-            override fun onTick(p0: Long) {}
-
-            override fun onFinish() {
-                elementControl.displayElementsBySelectedProperties(DisplayType.CHEMICAL_GROUP)
-            }
-        }.start()
+        elementControl.displayElementsBySelectedProperties(DisplayType.CHEMICAL_GROUP)
     }
 
     private fun onClickElement(element: Element) {

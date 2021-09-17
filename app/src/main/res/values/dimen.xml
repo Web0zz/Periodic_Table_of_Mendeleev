@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--Layout Size Dimen-->
+    <dimen name="top_bar_margin_start">20dp</dimen>
+
     <dimen name="splash_layout_size">250dp</dimen>
+
+    <dimen name="table_recyclerview_width">0dp</dimen>
 
     <dimen name="row_number_width">30dp</dimen>
     <dimen name="row_number_height">70dp</dimen>
     <dimen name="column_number_with">70dp</dimen>
     <dimen name="column_number_height">30dp</dimen>
+
     <dimen name="box_width">70dp</dimen>
     <dimen name="box_height">70dp</dimen>
 
-    <dimen name="detail_width">276dp</dimen>
+    <dimen name="detail_width">290dp</dimen>
 
     <dimen name="detail_image_width">0dp</dimen>
     <dimen name="detail_image_height">0dp</dimen>
@@ -20,8 +25,10 @@
     <!--Text Size Dimen-->
     <dimen name="number_size">18sp</dimen>
     <dimen name="small_element_number_text">11sp</dimen>
-    <dimen name="small_element_title_text">11sp</dimen>
+    <dimen name="small_element_title_text">8sp</dimen>
     <dimen name="small_element_symbol_text">20sp</dimen>
+
+    <dimen name="top_bar_name_text">20sp</dimen>
 
     <dimen name="detail_number_text">22sp</dimen>
     <dimen name="symbol_text">56sp</dimen>
@@ -31,8 +38,8 @@
     <!--Margin Dimen-->
     <dimen name="small_element_number_margin">4dp</dimen>
     <dimen name="detail_image_margin_top">15dp</dimen>
-    <dimen name="detail_number_margin_start">12dp</dimen>
-    <dimen name="button_margin_end">12dp</dimen>
+    <dimen name="detail_number_margin_start">3dp</dimen>
+    <dimen name="button_margin_end">5dp</dimen>
     <dimen name="title_margin_start">15dp</dimen>
     <dimen name="atomic_margin_top">5dp</dimen>
     <dimen name="common_value_margin_start">5dp</dimen>
