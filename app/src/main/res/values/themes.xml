@@ -10,4 +10,8 @@
         <!-- Customize your theme here. -->
         <item name="android:navigationBarColor">@color/black</item>
     </style>
+
+    <style name="App.ToolbarStyle" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
 </resources>
