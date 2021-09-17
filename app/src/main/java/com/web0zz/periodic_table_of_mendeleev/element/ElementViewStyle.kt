@@ -43,6 +43,11 @@ object ElementViewStyle {
                 element.colorText = R.color.group_text_metalloid
                 element.contentText = element.chemicalGroup
             }
+            "Halogen" -> {
+                element.colorBackground = R.color.group_background_halogen
+                element.colorText = R.color.group_text_halogen
+                element.contentText = element.chemicalGroup
+            }
             "Post-Transition Metal" -> {
                 element.colorBackground = R.color.group_background_post_transition_metal
                 element.colorText = R.color.group_text_post_transition_metal
