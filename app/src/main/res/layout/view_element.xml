@@ -16,28 +16,27 @@
         backgroundColorId="@{element.colorBackground}"
         android:layout_width="@dimen/box_width"
         android:layout_height="@dimen/box_height"
-        android:onClick="@{() -> element.onClick() }"
-        android:visibility="@{element.isVisible() ? View.VISIBLE : View.GONE}"
         tools:background="@color/light_background">
 
+
         <TextView
-            android:id="@+id/element_number"
+            android:id="@+id/element_number_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
+            android:layout_margin="@dimen/small_element_number_margin"
             android:text="@{element.number}"
-            android:textSize="11sp"
+            android:textSize="@dimen/small_element_number_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="30" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/symbol_textView"
             textColorId="@{element.colorText}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{element.title}"
-            android:textSize="20sp"
+            android:text="@{element.symbol}"
+            android:textSize="@dimen/small_element_symbol_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -45,14 +44,14 @@
             tools:text="Zn" />
 
         <TextView
-            android:id="@+id/element_long_title"
+            android:id="@+id/element_long_title_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{element.longTitle}"
-            android:textSize="11sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:text="@{element.title}"
+            android:textSize="@dimen/small_element_title_text"
+            app:layout_constraintEnd_toEndOf="@+id/symbol_textView"
+            app:layout_constraintStart_toStartOf="@+id/symbol_textView"
+            app:layout_constraintTop_toBottomOf="@+id/symbol_textView"
             tools:text="Zinc" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

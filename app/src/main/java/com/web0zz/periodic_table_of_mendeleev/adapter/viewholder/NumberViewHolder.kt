@@ -1,4 +1,4 @@
-package com.web0zz.periodic_table_of_mendeleev.screen.home.adapter.viewholder
+package com.web0zz.periodic_table_of_mendeleev.adapter.viewholder
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

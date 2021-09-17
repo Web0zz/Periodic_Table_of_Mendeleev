@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_element_text">#000000</color>
+
+    <!--Chemical Group-->
+    <color name="group_background_alkali_metal">#63414B</color>
+    <color name="group_text_alkali_metal">#E3C1CB</color>
+
+    <color name="group_background_alkaline_earth_metal">#685146</color>
+    <color name="group_text_alkali_alkaline_earth_metal">#E8D1C3</color>
+
+    <color name="group_background_transition_metal">#46536C</color>
+    <color name="group_text_transition_metal">#C6D3EC</color>
+
+    <color name="group_background_lanthanide">#534E4B</color>
+    <color name="group_text_lanthanide">#D3CECB</color>
+
+    <color name="group_background_actinide">#534345</color>
+    <color name="group_text_actinide">#D3C3C5</color>
+
+    <color name="group_background_post_transition_metal">#2F6859</color>
+    <color name="group_text_post_transition_metal">#8DE8D9</color>
+
+    <color name="group_background_metalloid">#2A5374</color>
+    <color name="group_text_metalloid">#7ED3F4</color>
+
+    <color name="group_background_nonmetal">#383A78</color>
+    <color name="group_text_nonmetal">#A8AEF8</color>
+
+    <color name="group_background_halogen">#534693</color>
+    <color name="group_text_halogen">#D3C6FF</color>
+
+    <color name="group_background_noble_gas">#6B468A</color>
+    <color name="group_text_noble_gas">#EBC6FF</color>
+    <!---->
+
+    <!--Standard State-->
+    <color name="state_background_gas">#00BCD4</color>
+    <color name="state_background_solid">#AFB1B1</color>
+    <color name="state_background_liquid">#FD5555</color>
+    <!---->
+
+    <color name="generate_color_default">#00CFB0</color>
+</resources>

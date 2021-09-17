@@ -1,71 +1,65 @@
 package com.web0zz.periodic_table_of_mendeleev.screen.home
 
+import android.os.CountDownTimer
 import android.view.animation.AnimationUtils
+import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.web0zz.periodic_table_of_mendeleev.screen.detail.DetailDialog
 import com.web0zz.periodic_table_of_mendeleev.R
-import com.web0zz.periodic_table_of_mendeleev.screen.home.adapter.RecyclerAdapter
+import com.web0zz.periodic_table_of_mendeleev.adapter.RecyclerAdapter
 import com.web0zz.periodic_table_of_mendeleev.base.BaseFragment
 import com.web0zz.periodic_table_of_mendeleev.data.dummy.DummyData
 import com.web0zz.periodic_table_of_mendeleev.data.model.Element
-import com.web0zz.periodic_table_of_mendeleev.data.model.Item
-import com.web0zz.periodic_table_of_mendeleev.databinding.LayoutHomeBinding
+import com.web0zz.periodic_table_of_mendeleev.databinding.FragmentHomeBinding
+import com.web0zz.periodic_table_of_mendeleev.element.DisplayType
+import com.web0zz.periodic_table_of_mendeleev.element.ElementControl
+import com.web0zz.periodic_table_of_mendeleev.screen.detail.DetailDialog
 
-class HomeFragment : BaseFragment<LayoutHomeBinding>() {
-    override fun getLayoutId() = R.layout.layout_home
+class HomeFragment : BaseFragment<FragmentHomeBinding>() {
+    override fun getLayoutId() = R.layout.fragment_home
 
     lateinit var recyclerAdapter: RecyclerAdapter
-
-    private val filterHistory = mutableListOf<String>()
+    lateinit var elementControl: ElementControl
 
     override fun initUi() {
         val data = DummyData
-        data.onClickDetail = { onClickDetail(it) }
 
         fragmentDataBinding.rowNumberRecyclerView.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             animation = AnimationUtils.loadAnimation(context, R.anim.row_anim)
-            adapter = RecyclerAdapter(data.rowNumber)
+            adapter = RecyclerAdapter(data.rowNumber) { }
         }
 
         fragmentDataBinding.periodicTableRecyclerView.apply {
             layoutManager = StaggeredGridLayoutManager(10, StaggeredGridLayoutManager.HORIZONTAL)
             animation = AnimationUtils.loadAnimation(context, R.anim.recyclerview_anim)
-            adapter = RecyclerAdapter(data.listAdapter).apply { recyclerAdapter = this }
-            setHasFixedSize(true)
+            adapter = RecyclerAdapter(data.listAdapter) { element ->
+                onClickElement(element)
+            }.apply { recyclerAdapter = this }
         }
-    }
 
-    private fun filterElement(filterTitle: String) {
-        recyclerAdapter.items.filter { it.getType() == Item.Type.ELEMENT.ordinal }
-            .filter { (it as Element).title == filterTitle }
-            .forEach {
-                (it as Element).isVisible = false
-                recyclerAdapter.notifyItemChanged(it.position)
+        elementControl = object : ElementControl(recyclerAdapter, requireContext()) {}
 
-                filterHistory.add(filterTitle)
+        object : CountDownTimer(10000, 1000) {
+            override fun onTick(p0: Long) {}
+
+            override fun onFinish() {
+                elementControl.displayElementsBySelectedProperties(DisplayType.CHEMICAL_GROUP)
             }
+        }.start()
     }
 
-    private fun clearFilter() {
-        filterHistory.forEach { itemName ->
-            recyclerAdapter.items.filter { it.getType() == Item.Type.ELEMENT.ordinal }
-                .filter { (it as Element).title == itemName }
-                .forEach {
-                    (it as Element).isVisible = true
-                    recyclerAdapter.notifyItemChanged(it.position)
-                }
-        }
+    private fun onClickElement(element: Element) {
+        val bundleData = bundleOf(Pair("elementSymbol", element.symbol))
+        val detail = DetailDialog()
 
-        filterHistory.clear()
-    }
-
-    private fun onClickDetail(element: Element) {
-        DetailDialog().show(childFragmentManager, "DetailFragment")
+        detail.arguments = bundleData
+        detail.show(childFragmentManager, "DetailFragment")
     }
 
     companion object {
-        fun newInstance() = HomeFragment()
+        fun newInstance(): HomeFragment {
+            return HomeFragment()
+        }
     }
 }

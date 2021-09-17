@@ -1,12 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Layout Size Dimen-->
+    <dimen name="splash_layout_size">200dp</dimen>
+
     <dimen name="row_number_width">30dp</dimen>
     <dimen name="row_number_height">70dp</dimen>
     <dimen name="column_number_with">70dp</dimen>
     <dimen name="column_number_height">30dp</dimen>
-
     <dimen name="box_width">70dp</dimen>
     <dimen name="box_height">70dp</dimen>
 
+    <dimen name="detail_width">276dp</dimen>
+
+    <dimen name="detail_image_width">0dp</dimen>
+    <dimen name="detail_image_height">0dp</dimen>
+
+    <dimen name="button_min_size">48dp</dimen>
+
+    <!--Text Size Dimen-->
     <dimen name="number_size">18sp</dimen>
+    <dimen name="small_element_number_text">11sp</dimen>
+    <dimen name="small_element_title_text">11sp</dimen>
+    <dimen name="small_element_symbol_text">20sp</dimen>
+
+    <dimen name="detail_number_text">22sp</dimen>
+    <dimen name="symbol_text">56sp</dimen>
+    <dimen name="title_text">22sp</dimen>
+    <dimen name="common_text_size">14sp</dimen>
+
+    <!--Margin Dimen-->
+    <dimen name="small_element_number_margin">4dp</dimen>
+    <dimen name="detail_image_margin_top">15dp</dimen>
+    <dimen name="detail_number_margin_start">12dp</dimen>
+    <dimen name="button_margin_end">12dp</dimen>
+    <dimen name="title_margin_start">15dp</dimen>
+    <dimen name="atomic_margin_top">5dp</dimen>
+    <dimen name="common_value_margin_start">5dp</dimen>
+    <dimen name="common_value_margin_top">3dp</dimen>
+    <dimen name="expanded_detail_margin_top">10dp</dimen>
+    <dimen name="common_expanded_value_margin_top">6dp</dimen>
+
+    <!--Padding Dimen-->
+    <dimen name="detail_bottom_padding">10dp</dimen>
+
+    <!--Guideline-Barrier-->
+    <dimen name="top_guideline">45dp</dimen>
+    <dimen name="left_guideline">25dp</dimen>
+    <dimen name="right_guideline">25dp</dimen>
+    <dimen name="image_bottom_guideline">329dp</dimen>
+    <dimen name="middle_guideline">138dp</dimen>
 </resources>

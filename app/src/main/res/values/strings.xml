@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Periodic_Table_of_Mendeleev</string>
+    <string name="atomic_weight">Atomic Weight:</string>
+    <string name="electron_config">Electron Config:</string>
+    <string name="element_sample">Element Sample</string>
+    <string name="more_detail">More Detail</string>
+    <string name="standard_state">Standard State</string>
+    <string name="electronegativity">Electronegativity</string>
+    <string name="atomic_radius">Atomic Radius</string>
+    <string name="ionization_energy">Ionization Energy</string>
+    <string name="electron_affinity">Electron Affinity</string>
+    <string name="melting_point">Melting Point</string>
+    <string name="boiling_point">Boiling Point</string>
+    <string name="year_discovered">Year Discovered</string>
+    <string name="density">Density</string>
+    <string name="close_expanded_detail">Close Expanded Detail</string>
 </resources>
