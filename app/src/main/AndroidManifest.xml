@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.web0zz.periodic_table_of_mendeleev">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -16,9 +15,7 @@
         android:theme="@style/Theme.Periodic_Table_of_Mendeleev">
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

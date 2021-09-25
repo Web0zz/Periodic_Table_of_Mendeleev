@@ -2,22 +2,24 @@ package com.web0zz.periodic_table_of_mendeleev.data.dummy
 
 import com.web0zz.periodic_table_of_mendeleev.data.model.Element
 import com.web0zz.periodic_table_of_mendeleev.data.model.Empty
-import com.web0zz.periodic_table_of_mendeleev.data.model.Number
+import com.web0zz.periodic_table_of_mendeleev.data.model.IndexNumber
 
 object DummyData {
+    val columnList = listOf(
+        IndexNumber("", true),
+        IndexNumber("1", true),
+        IndexNumber("2", true),
+        IndexNumber("3", true),
+        IndexNumber("4", true),
+        IndexNumber("5", true),
+        IndexNumber("6", true),
+        IndexNumber("7", true),
+    )
+
     val listAdapter = listOf(
-        Empty,
-        Number("1", true),
-        Number("2", true),
-        Number("3", true),
-        Number("4", true),
-        Number("5", true),
-        Number("6", true),
-        Number("7", true),
-        Number("8", true),
-        Number("9", true),
-        Number("1", false),
-        Element("H",
+        IndexNumber("1", false),
+        Element(
+            "H",
             "Hydrogen",
             "1",
             "1.0080 u",
@@ -30,8 +32,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Li",
+            "1766"
+        ),
+        Element(
+            "Li",
             "Lithium",
             "3",
             "11.011",
@@ -44,8 +48,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Nas",
+            "1766"
+        ),
+        Element(
+            "Nas",
             "Sodium",
             "11",
             "11.011",
@@ -58,8 +64,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("K",
+            "1766"
+        ),
+        Element(
+            "K",
             "Potassium",
             "19",
             "11.011",
@@ -72,8 +80,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Rb",
+            "1766"
+        ),
+        Element(
+            "Rb",
             "Rubidium",
             "37",
             "11.011",
@@ -86,8 +96,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Cs",
+            "1766"
+        ),
+        Element(
+            "Cs",
             "Cesium",
             "55",
             "11.011",
@@ -100,8 +112,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Fr",
+            "1766"
+        ),
+        Element(
+            "Fr",
             "Francium",
             "87",
             "11.011",
@@ -114,12 +128,15 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
+            "1766"
+        ),
         Empty,
         Empty,
-        Number("2", false),
         Empty,
-        Element("Be",
+        IndexNumber("2", false),
+        Empty,
+        Element(
+            "Be",
             "Beryllium",
             "4",
             "11.011",
@@ -132,8 +149,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Mg",
+            "1766"
+        ),
+        Element(
+            "Mg",
             "Magnesium",
             "12",
             "11.011",
@@ -146,8 +165,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Ca",
+            "1766"
+        ),
+        Element(
+            "Ca",
             "Calcium",
             "20",
             "11.011",
@@ -160,8 +181,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Sr",
+            "1766"
+        ),
+        Element(
+            "Sr",
             "Strontium",
             "38",
             "11.011",
@@ -174,8 +197,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Ba",
+            "1766"
+        ),
+        Element(
+            "Ba",
             "Barium",
             "56",
             "11.011",
@@ -188,8 +213,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Ra",
+            "1766"
+        ),
+        Element(
+            "Ra",
             "Radium",
             "88",
             "11.011",
@@ -202,14 +229,17 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Empty,
-        Empty,
-        Number("3", false),
+            "1766"
+        ),
         Empty,
         Empty,
         Empty,
-        Element("Sc",
+        IndexNumber("3", false),
+        Empty,
+        Empty,
+        Empty,
+        Element(
+            "Sc",
             "Scandium",
             "21",
             "11.011",
@@ -222,8 +252,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Y",
+            "1766"
+        ),
+        Element(
+            "Y",
             "Yttrium",
             "39",
             "11.011",
@@ -236,16 +268,19 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
+            "1766"
+        ),
         Empty,
         Empty,
         Empty,
         Empty,
-        Number("4", false),
+        Empty,
+        IndexNumber("4", false),
         Empty,
         Empty,
         Empty,
-        Element("Ti",
+        Element(
+            "Ti",
             "Titanium",
             "22",
             "11.011",
@@ -258,8 +293,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Zr",
+            "1766"
+        ),
+        Element(
+            "Zr",
             "Zirconium",
             "40",
             "11.011",
@@ -272,8 +309,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Hf",
+            "1766"
+        ),
+        Element(
+            "Hf",
             "Hafnium",
             "72",
             "11.011",
@@ -286,8 +325,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Rf",
+            "1766"
+        ),
+        Element(
+            "Rf",
             "Rutherfordium",
             "104",
             "11.011",
@@ -300,8 +341,11 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("La",
+            "1766"
+        ),
+        Empty,
+        Element(
+            "La",
             "Lanthanum",
             "57",
             "11.011",
@@ -314,8 +358,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Ac",
+            "1766"
+        ),
+        Element(
+            "Ac",
             "Actinium",
             "89",
             "11.011",
@@ -328,12 +374,14 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Number("5", false),
+            "1766"
+        ),
+        IndexNumber("5", false),
         Empty,
         Empty,
         Empty,
-        Element("V",
+        Element(
+            "V",
             "Vanadium",
             "23",
             "11.011",
@@ -346,8 +394,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Nb",
+            "1766"
+        ),
+        Element(
+            "Nb",
             "Niobium",
             "41",
             "11.011",
@@ -360,8 +410,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Ta",
+            "1766"
+        ),
+        Element(
+            "Ta",
             "Tantalum",
             "73",
             "11.011",
@@ -374,8 +426,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Db",
+            "1766"
+        ),
+        Element(
+            "Db",
             "Dubnium",
             "105",
             "11.011",
@@ -388,8 +442,11 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Ce",
+            "1766"
+        ),
+        Empty,
+        Element(
+            "Ce",
             "Cerium",
             "58",
             "11.011",
@@ -402,8 +459,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Th",
+            "1766"
+        ),
+        Element(
+            "Th",
             "Thorium",
             "90",
             "11.011",
@@ -416,12 +475,14 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Number("6", false),
+            "1766"
+        ),
+        IndexNumber("6", false),
         Empty,
         Empty,
         Empty,
-        Element("Cr",
+        Element(
+            "Cr",
             "Chromium",
             "24",
             "11.011",
@@ -434,8 +495,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Mo",
+            "1766"
+        ),
+        Element(
+            "Mo",
             "Molybdenum",
             "42",
             "11.011",
@@ -448,8 +511,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("W",
+            "1766"
+        ),
+        Element(
+            "W",
             "Tungsten",
             "74",
             "11.011",
@@ -462,8 +527,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Sg",
+            "1766"
+        ),
+        Element(
+            "Sg",
             "Seaborgium",
             "106",
             "11.011",
@@ -476,8 +543,11 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Pr",
+            "1766"
+        ),
+        Empty,
+        Element(
+            "Pr",
             "Praseodymium",
             "59",
             "11.011",
@@ -490,8 +560,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Pa",
+            "1766"
+        ),
+        Element(
+            "Pa",
             "Protactinium",
             "91",
             "11.011",
@@ -504,12 +576,14 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Number("7", false),
+            "1766"
+        ),
+        IndexNumber("7", false),
         Empty,
         Empty,
         Empty,
-        Element("Mn",
+        Element(
+            "Mn",
             "Manganese",
             "25",
             "11.011",
@@ -522,8 +596,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Tc",
+            "1766"
+        ),
+        Element(
+            "Tc",
             "Technetium",
             "43",
             "11.011",
@@ -536,8 +612,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Re",
+            "1766"
+        ),
+        Element(
+            "Re",
             "Rhenium",
             "75",
             "11.011",
@@ -550,8 +628,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Bh",
+            "1766"
+        ),
+        Element(
+            "Bh",
             "Bohrium",
             "107",
             "11.011",
@@ -564,8 +644,11 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Nd",
+            "1766"
+        ),
+        Empty,
+        Element(
+            "Nd",
             "Neodymium",
             "60",
             "11.011",
@@ -578,8 +661,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("U",
+            "1766"
+        ),
+        Element(
+            "U",
             "Uranium",
             "92",
             "11.011",
@@ -592,12 +677,14 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Number("8", false),
+            "1766"
+        ),
+        IndexNumber("8", false),
         Empty,
         Empty,
         Empty,
-        Element("Fe",
+        Element(
+            "Fe",
             "Iron",
             "26",
             "11.011",
@@ -610,8 +697,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Ru",
+            "1766"
+        ),
+        Element(
+            "Ru",
             "Ruthenium",
             "44",
             "11.011",
@@ -624,8 +713,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Os",
+            "1766"
+        ),
+        Element(
+            "Os",
             "Osmium",
             "76",
             "11.011",
@@ -638,8 +729,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("HS",
+            "1766"
+        ),
+        Element(
+            "HS",
             "Hassium",
             "108",
             "11.011",
@@ -652,8 +745,11 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Pm",
+            "1766"
+        ),
+        Empty,
+        Element(
+            "Pm",
             "Promethium",
             "61",
             "11.011",
@@ -666,8 +762,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Np",
+            "1766"
+        ),
+        Element(
+            "Np",
             "Neptunium",
             "93",
             "11.011",
@@ -680,12 +778,14 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Number("9", false),
+            "1766"
+        ),
+        IndexNumber("9", false),
         Empty,
         Empty,
         Empty,
-        Element("Co",
+        Element(
+            "Co",
             "Cobalt",
             "27",
             "11.011",
@@ -698,8 +798,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Rh",
+            "1766"
+        ),
+        Element(
+            "Rh",
             "Rhodium",
             "45",
             "11.011",
@@ -712,8 +814,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Lr",
+            "1766"
+        ),
+        Element(
+            "Lr",
             "Iridium",
             "77",
             "11.011",
@@ -726,8 +830,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Mt",
+            "1766"
+        ),
+        Element(
+            "Mt",
             "Meitnerium",
             "109",
             "11.011",
@@ -740,8 +846,11 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Sm",
+            "1766"
+        ),
+        Empty,
+        Element(
+            "Sm",
             "Samarium",
             "62",
             "11.011",
@@ -754,8 +863,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Pu",
+            "1766"
+        ),
+        Element(
+            "Pu",
             "Plutonium",
             "94",
             "11.011",
@@ -768,12 +879,14 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Number("10", false),
+            "1766"
+        ),
+        IndexNumber("10", false),
         Empty,
         Empty,
         Empty,
-        Element("Ni",
+        Element(
+            "Ni",
             "Nickel",
             "28",
             "11.011",
@@ -786,8 +899,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Pd",
+            "1766"
+        ),
+        Element(
+            "Pd",
             "Palladium",
             "46",
             "11.011",
@@ -800,8 +915,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Pt",
+            "1766"
+        ),
+        Element(
+            "Pt",
             "Platinum",
             "78",
             "11.011",
@@ -814,8 +931,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Ds",
+            "1766"
+        ),
+        Element(
+            "Ds",
             "Darmstadtium",
             "110",
             "11.011",
@@ -828,8 +947,11 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Eu",
+            "1766"
+        ),
+        Empty,
+        Element(
+            "Eu",
             "Europium",
             "63",
             "11.011",
@@ -842,8 +964,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Am",
+            "1766"
+        ),
+        Element(
+            "Am",
             "Americium",
             "95",
             "11.011",
@@ -856,12 +980,14 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Number("11", false),
+            "1766"
+        ),
+        IndexNumber("11", false),
         Empty,
         Empty,
         Empty,
-        Element("Cu",
+        Element(
+            "Cu",
             "Copper",
             "29",
             "11.011",
@@ -874,8 +1000,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Ag",
+            "1766"
+        ),
+        Element(
+            "Ag",
             "Silver",
             "47",
             "11.011",
@@ -888,8 +1016,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Au",
+            "1766"
+        ),
+        Element(
+            "Au",
             "Gold",
             "79",
             "11.011",
@@ -902,8 +1032,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Rg",
+            "1766"
+        ),
+        Element(
+            "Rg",
             "Roentgenium",
             "111",
             "11.011",
@@ -916,8 +1048,11 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Gd",
+            "1766"
+        ),
+        Empty,
+        Element(
+            "Gd",
             "Gadolinium",
             "64",
             "11.011",
@@ -930,8 +1065,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Cm",
+            "1766"
+        ),
+        Element(
+            "Cm",
             "Curium",
             "96",
             "11.011",
@@ -944,12 +1081,14 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Number("12", false),
+            "1766"
+        ),
+        IndexNumber("12", false),
         Empty,
         Empty,
         Empty,
-        Element("Zn",
+        Element(
+            "Zn",
             "Zinc",
             "30",
             "11.011",
@@ -962,8 +1101,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Cd",
+            "1766"
+        ),
+        Element(
+            "Cd",
             "Cadmium",
             "48",
             "11.011",
@@ -976,8 +1117,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Hg",
+            "1766"
+        ),
+        Element(
+            "Hg",
             "Mercury",
             "80",
             "11.011",
@@ -990,8 +1133,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Cn",
+            "1766"
+        ),
+        Element(
+            "Cn",
             "Copernicium",
             "112",
             "11.011",
@@ -1004,8 +1149,11 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Tb",
+            "1766"
+        ),
+        Empty,
+        Element(
+            "Tb",
             "Terbium",
             "65",
             "11.011",
@@ -1018,8 +1166,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Bk",
+            "1766"
+        ),
+        Element(
+            "Bk",
             "Berkelium",
             "97",
             "11.011",
@@ -1032,10 +1182,12 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Number("13", false),
+            "1766"
+        ),
+        IndexNumber("13", false),
         Empty,
-        Element("B",
+        Element(
+            "B",
             "Boron",
             "5",
             "11.011",
@@ -1048,8 +1200,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Al",
+            "1766"
+        ),
+        Element(
+            "Al",
             "Aluminum",
             "13",
             "11.011",
@@ -1062,8 +1216,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Ga",
+            "1766"
+        ),
+        Element(
+            "Ga",
             "Gallium",
             "31",
             "11.011",
@@ -1076,8 +1232,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("In",
+            "1766"
+        ),
+        Element(
+            "In",
             "Indium",
             "49",
             "11.011",
@@ -1090,8 +1248,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Tl",
+            "1766"
+        ),
+        Element(
+            "Tl",
             "Thallium",
             "81",
             "11.011",
@@ -1104,8 +1264,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Nh",
+            "1766"
+        ),
+        Element(
+            "Nh",
             "Nihonium",
             "113",
             "11.011",
@@ -1118,8 +1280,11 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Dy",
+            "1766"
+        ),
+        Empty,
+        Element(
+            "Dy",
             "Dysprosium",
             "66",
             "11.011",
@@ -1132,8 +1297,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Cf",
+            "1766"
+        ),
+        Element(
+            "Cf",
             "Californium",
             "98",
             "11.011",
@@ -1146,10 +1313,12 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Number("14", false),
+            "1766"
+        ),
+        IndexNumber("14", false),
         Empty,
-        Element("C",
+        Element(
+            "C",
             "Carbon",
             "6",
             "11.011",
@@ -1162,8 +1331,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Si",
+            "1766"
+        ),
+        Element(
+            "Si",
             "Silicon",
             "14",
             "11.011",
@@ -1176,8 +1347,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Ge",
+            "1766"
+        ),
+        Element(
+            "Ge",
             "Germanium",
             "32",
             "11.011",
@@ -1190,8 +1363,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Sn",
+            "1766"
+        ),
+        Element(
+            "Sn",
             "Tin",
             "50",
             "11.011",
@@ -1204,8 +1379,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Pb",
+            "1766"
+        ),
+        Element(
+            "Pb",
             "Lead",
             "82",
             "11.011",
@@ -1218,8 +1395,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Fl",
+            "1766"
+        ),
+        Element(
+            "Fl",
             "Flerovium",
             "114",
             "11.011",
@@ -1232,8 +1411,11 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Ho",
+            "1766"
+        ),
+        Empty,
+        Element(
+            "Ho",
             "Holmium",
             "67",
             "11.011",
@@ -1246,8 +1428,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Es",
+            "1766"
+        ),
+        Element(
+            "Es",
             "Einsteinium",
             "99",
             "11.011",
@@ -1260,10 +1444,12 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Number("15", false),
+            "1766"
+        ),
+        IndexNumber("15", false),
         Empty,
-        Element("N",
+        Element(
+            "N",
             "Nitrogen",
             "7",
             "11.011",
@@ -1276,8 +1462,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("P",
+            "1766"
+        ),
+        Element(
+            "P",
             "Phosphorus",
             "15",
             "11.011",
@@ -1290,8 +1478,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("As",
+            "1766"
+        ),
+        Element(
+            "As",
             "Arsenic",
             "33",
             "11.011",
@@ -1304,8 +1494,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Sb",
+            "1766"
+        ),
+        Element(
+            "Sb",
             "Antimony",
             "51",
             "11.011",
@@ -1318,8 +1510,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Bi",
+            "1766"
+        ),
+        Element(
+            "Bi",
             "Bismuth",
             "83",
             "11.011",
@@ -1332,8 +1526,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Mc",
+            "1766"
+        ),
+        Element(
+            "Mc",
             "Moscovium",
             "115",
             "11.011",
@@ -1346,8 +1542,11 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Er",
+            "1766"
+        ),
+        Empty,
+        Element(
+            "Er",
             "Erbium",
             "68",
             "11.011",
@@ -1360,8 +1559,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Fm",
+            "1766"
+        ),
+        Element(
+            "Fm",
             "Fermium",
             "100",
             "11.011",
@@ -1374,10 +1575,12 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Number("16", false),
+            "1766"
+        ),
+        IndexNumber("16", false),
         Empty,
-        Element("O",
+        Element(
+            "O",
             "Oxygen",
             "8",
             "11.011",
@@ -1390,8 +1593,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("S",
+            "1766"
+        ),
+        Element(
+            "S",
             "Sulfur",
             "16",
             "11.011",
@@ -1404,8 +1609,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Se",
+            "1766"
+        ),
+        Element(
+            "Se",
             "Selenium",
             "34",
             "11.011",
@@ -1418,8 +1625,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Te",
+            "1766"
+        ),
+        Element(
+            "Te",
             "Tellurium",
             "52",
             "11.011",
@@ -1432,8 +1641,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Po",
+            "1766"
+        ),
+        Element(
+            "Po",
             "Polonium",
             "84",
             "11.011",
@@ -1446,8 +1657,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Lv",
+            "1766"
+        ),
+        Element(
+            "Lv",
             "Livermorium",
             "116",
             "11.011",
@@ -1460,8 +1673,11 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Tm",
+            "1766"
+        ),
+        Empty,
+        Element(
+            "Tm",
             "Thulium",
             "69",
             "11.011",
@@ -1474,8 +1690,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Md",
+            "1766"
+        ),
+        Element(
+            "Md",
             "Mendelevium",
             "101",
             "11.011",
@@ -1488,10 +1706,12 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Number("17", false),
+            "1766"
+        ),
+        IndexNumber("17", false),
         Empty,
-        Element("F",
+        Element(
+            "F",
             "Fluorine",
             "9",
             "11.011",
@@ -1504,8 +1724,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Cl",
+            "1766"
+        ),
+        Element(
+            "Cl",
             "Chlorine",
             "17",
             "11.011",
@@ -1518,8 +1740,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Br",
+            "1766"
+        ),
+        Element(
+            "Br",
             "Bromine",
             "35",
             "11.011",
@@ -1532,8 +1756,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("I",
+            "1766"
+        ),
+        Element(
+            "I",
             "Iodine",
             "53",
             "11.011",
@@ -1546,8 +1772,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("At",
+            "1766"
+        ),
+        Element(
+            "At",
             "Astatine",
             "85",
             "11.011",
@@ -1560,8 +1788,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Ts",
+            "1766"
+        ),
+        Element(
+            "Ts",
             "Tennessine",
             "117",
             "11.011",
@@ -1574,8 +1804,11 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Yb",
+            "1766"
+        ),
+        Empty,
+        Element(
+            "Yb",
             "Ytterbium",
             "70",
             "11.011",
@@ -1588,8 +1821,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("No",
+            "1766"
+        ),
+        Element(
+            "No",
             "Nobelium",
             "102",
             "11.011",
@@ -1602,9 +1837,11 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Number("18", false),
-        Element("He",
+            "1766"
+        ),
+        IndexNumber("18", false),
+        Element(
+            "He",
             "Helium",
             "2",
             "11.011",
@@ -1617,8 +1854,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Ne",
+            "1766"
+        ),
+        Element(
+            "Ne",
             "Neon",
             "10",
             "11.011",
@@ -1631,8 +1870,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Ar",
+            "1766"
+        ),
+        Element(
+            "Ar",
             "Argon",
             "18",
             "11.011",
@@ -1645,8 +1886,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Kr",
+            "1766"
+        ),
+        Element(
+            "Kr",
             "Krypton",
             "36",
             "11.011",
@@ -1659,8 +1902,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Xe",
+            "1766"
+        ),
+        Element(
+            "Xe",
             "Xenon",
             "54",
             "11.011",
@@ -1673,8 +1918,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Rn",
+            "1766"
+        ),
+        Element(
+            "Rn",
             "Radon",
             "86",
             "11.011",
@@ -1687,8 +1934,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Og",
+            "1766"
+        ),
+        Element(
+            "Og",
             "Oganesson",
             "118",
             "11.011",
@@ -1701,8 +1950,11 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Lu",
+            "1766"
+        ),
+        Empty,
+        Element(
+            "Lu",
             "Lutetium",
             "71",
             "11.011",
@@ -1715,8 +1967,10 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766"),
-        Element("Lr",
+            "1766"
+        ),
+        Element(
+            "Lr",
             "Lawrencium",
             "103",
             "11.011",
@@ -1729,6 +1983,7 @@ object DummyData {
             "13.81 K",
             "20.28 K",
             "0.08988 g/cm³",
-            "1766")
+            "1766"
+        )
     )
 }

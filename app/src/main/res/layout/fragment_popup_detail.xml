@@ -14,363 +14,368 @@
             type="com.web0zz.periodic_table_of_mendeleev.data.model.Element" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_detail"
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:padding="15dp"
-        android:paddingBottom="@dimen/detail_bottom_padding"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:background="@color/white">
 
-        <ImageView
-            android:id="@+id/element_sample_imageView"
-            android:layout_width="@dimen/detail_image_width"
-            android:layout_height="@dimen/detail_image_height"
-            android:layout_marginTop="@dimen/detail_image_margin_top"
-            android:contentDescription="@string/element_sample"
-            android:src="@{context.getDrawable(element.sampleImage)}"
-            app:layout_constraintBottom_toTopOf="@+id/bottom_guideline"
-            app:layout_constraintEnd_toStartOf="@+id/right_guideline"
-            app:layout_constraintStart_toStartOf="@+id/left_guideline"
-            app:layout_constraintTop_toBottomOf="@+id/element_symbol_textView"
-            tools:srcCompat="@drawable/sample_2" />
-
-        <TextView
-            android:id="@+id/element_number_textView"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/detail_number_margin_start"
-            android:text="@{element.number}"
-            android:textColor="@color/black"
-            android:textSize="@dimen/detail_number_text"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/top_guideline"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="102" />
-
-        <ImageButton
-            android:id="@+id/close_detail_imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:contentDescription="@string/more_detail"
-            android:minWidth="@dimen/button_min_size"
-            android:minHeight="@dimen/button_min_size"
-            android:onClick="@{_ -> myInterface.dismiss()}"
-            android:src="@drawable/ic_close"
-            app:layout_constraintBottom_toTopOf="@+id/top_guideline"
+            android:padding="15dp"
+            android:paddingBottom="@dimen/detail_bottom_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/more_detail_imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/button_margin_end"
-            android:background="@null"
-            android:contentDescription="@string/more_detail"
-            android:minWidth="@dimen/button_min_size"
-            android:minHeight="@dimen/button_min_size"
-            android:onClick="@{_ -> myInterface.expandDetail()}"
-            android:src="@drawable/ic_info"
-            app:layout_constraintBottom_toTopOf="@+id/top_guideline"
-            app:layout_constraintEnd_toStartOf="@+id/close_detail_imageButton"
-            app:layout_constraintTop_toTopOf="@+id/close_detail_imageButton"
-            app:layout_constraintVertical_bias="1.0" />
+            <ImageView
+                android:id="@+id/element_sample_imageView"
+                android:layout_width="@dimen/detail_image_width"
+                android:layout_height="@dimen/detail_image_height"
+                android:layout_marginTop="@dimen/detail_image_margin_top"
+                android:contentDescription="@string/element_sample"
+                android:src="@{context.getDrawable(element.sampleImage)}"
+                app:layout_constraintBottom_toTopOf="@+id/bottom_guideline"
+                app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/element_symbol_textView"
+                tools:srcCompat="@drawable/sample_2" />
 
-        <ImageButton
-            android:id="@+id/close_more_detail_imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/button_margin_end"
-            android:background="@null"
-            android:contentDescription="@string/close_expanded_detail"
-            android:minWidth="@dimen/button_min_size"
-            android:minHeight="@dimen/button_min_size"
-            android:onClick="@{_ -> myInterface.expandDetail()}"
-            android:src="@drawable/ic_extend_back"
-            android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@+id/top_guideline"
-            app:layout_constraintEnd_toStartOf="@+id/close_detail_imageButton"
-            app:layout_constraintTop_toTopOf="@+id/close_detail_imageButton"
-            app:layout_constraintVertical_bias="1.0" />
+            <TextView
+                android:id="@+id/element_number_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/detail_number_margin_start"
+                android:text="@{element.number}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/detail_number_text"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/top_guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="102" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/top_guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="@dimen/top_guideline" />
+            <ImageButton
+                android:id="@+id/close_detail_imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/more_detail"
+                android:minWidth="@dimen/button_min_size"
+                android:minHeight="@dimen/button_min_size"
+                android:onClick="@{_ -> myInterface.dismiss()}"
+                android:src="@drawable/ic_close"
+                app:layout_constraintBottom_toTopOf="@+id/top_guideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/left_guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="@dimen/left_guideline" />
+            <ImageButton
+                android:id="@+id/more_detail_imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/button_margin_end"
+                android:background="@null"
+                android:contentDescription="@string/more_detail"
+                android:minWidth="@dimen/button_min_size"
+                android:minHeight="@dimen/button_min_size"
+                android:onClick="@{_ -> myInterface.expandDetail()}"
+                android:src="@drawable/ic_info"
+                app:layout_constraintBottom_toTopOf="@+id/top_guideline"
+                app:layout_constraintEnd_toStartOf="@+id/close_detail_imageButton"
+                app:layout_constraintTop_toTopOf="@+id/close_detail_imageButton"
+                app:layout_constraintVertical_bias="1.0" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/right_guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_end="@dimen/right_guideline" />
+            <ImageButton
+                android:id="@+id/close_more_detail_imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/button_margin_end"
+                android:background="@null"
+                android:contentDescription="@string/close_expanded_detail"
+                android:minWidth="@dimen/button_min_size"
+                android:minHeight="@dimen/button_min_size"
+                android:onClick="@{_ -> myInterface.expandDetail()}"
+                android:src="@drawable/ic_extend_back"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/top_guideline"
+                app:layout_constraintEnd_toStartOf="@+id/close_detail_imageButton"
+                app:layout_constraintTop_toTopOf="@+id/close_detail_imageButton"
+                app:layout_constraintVertical_bias="1.0" />
 
-        <TextView
-            android:id="@+id/element_symbol_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{element.symbol}"
-            android:textColor="@color/black"
-            android:textSize="@dimen/symbol_text"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/electron_textView"
-            app:layout_constraintStart_toStartOf="@+id/left_guideline"
-            app:layout_constraintTop_toTopOf="@+id/top_guideline"
-            tools:text="Cc" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/top_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/top_guideline" />
 
-        <TextView
-            android:id="@+id/element_title_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/title_margin_start"
-            android:text="@{element.title}"
-            android:textColor="@color/black"
-            android:textSize="@dimen/title_text"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/element_symbol_textView"
-            app:layout_constraintTop_toTopOf="@+id/top_guideline"
-            tools:text="Carbon" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/left_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/left_guideline" />
 
-        <TextView
-            android:id="@+id/weight_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/atomic_margin_top"
-            android:text="@string/atomic_weight"
-            android:textColor="@color/black"
-            android:textSize="@dimen/common_text_size"
-            app:layout_constraintStart_toStartOf="@+id/element_title_textView"
-            app:layout_constraintTop_toBottomOf="@+id/element_title_textView" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/right_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/right_guideline" />
 
-        <TextView
-            android:id="@+id/element_weight_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/common_value_margin_start"
-            android:text="@{element.atomicWeight}"
-            app:layout_constraintBaseline_toBaselineOf="@+id/weight_textView"
-            app:layout_constraintStart_toEndOf="@+id/weight_textView"
-            tools:text="11.011" />
+            <TextView
+                android:id="@+id/element_symbol_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{element.symbol}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/symbol_text"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/electron_textView"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toTopOf="@+id/top_guideline"
+                tools:text="Cc" />
 
-        <TextView
-            android:id="@+id/electron_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/common_value_margin_top"
-            android:text="@string/electron_config"
-            android:textColor="@color/black"
-            android:textSize="@dimen/common_text_size"
-            app:layout_constraintStart_toStartOf="@+id/weight_textView"
-            app:layout_constraintTop_toBottomOf="@+id/weight_textView" />
+            <TextView
+                android:id="@+id/element_title_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/title_margin_start"
+                android:text="@{element.title}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_text"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/element_symbol_textView"
+                app:layout_constraintTop_toTopOf="@+id/top_guideline"
+                tools:text="Carbon" />
 
-        <TextView
-            android:id="@+id/element_electron_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/common_value_margin_start"
-            android:text="@{element.electronConfig}"
-            app:layout_constraintBaseline_toBaselineOf="@+id/electron_textView"
-            app:layout_constraintStart_toEndOf="@+id/electron_textView"
-            tools:text="[He]2sp2" />
+            <TextView
+                android:id="@+id/weight_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/atomic_margin_top"
+                android:text="@string/atomic_weight"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_text_size"
+                app:layout_constraintStart_toStartOf="@+id/element_title_textView"
+                app:layout_constraintTop_toBottomOf="@+id/element_title_textView" />
 
-        <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/top_barrier"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:barrierDirection="bottom"
-            app:constraint_referenced_ids="element_electron_textView,electron_textView"
-            tools:layout_editor_absoluteY="300dp" />
+            <TextView
+                android:id="@+id/element_weight_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_value_margin_start"
+                android:text="@{element.atomicWeight}"
+                app:layout_constraintBaseline_toBaselineOf="@+id/weight_textView"
+                app:layout_constraintStart_toEndOf="@+id/weight_textView"
+                tools:text="11.011" />
 
-        <androidx.constraintlayout.widget.Group
-            android:id="@+id/expanded_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            app:constraint_referenced_ids=",boiling_point_textView,electronegativity_value_textView,density_textView,boiling_point_value_textView,melting_point_value_textView,electronegativity_textView,melting_point_textView,atomic_radius_textView,ionization_energy_textView,density_value_textView,ionization_energy_value_textView,atomic_radius_value_textView,standard_state_value_textView,electron_affinity_textView,electron_affinity_value_textView,standard_state_textView" />
+            <TextView
+                android:id="@+id/electron_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_value_margin_top"
+                android:text="@string/electron_config"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_text_size"
+                app:layout_constraintStart_toStartOf="@+id/weight_textView"
+                app:layout_constraintTop_toBottomOf="@+id/weight_textView" />
 
-        <TextView
-            android:id="@+id/standard_state_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/expanded_detail_margin_top"
-            android:tag="expanded_detail"
-            android:text="@string/standard_state"
-            app:layout_constraintStart_toStartOf="@+id/left_guideline"
-            app:layout_constraintTop_toTopOf="@+id/bottom_guideline" />
+            <TextView
+                android:id="@+id/element_electron_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_value_margin_start"
+                android:text="@{element.electronConfig}"
+                app:layout_constraintBaseline_toBaselineOf="@+id/electron_textView"
+                app:layout_constraintStart_toEndOf="@+id/electron_textView"
+                tools:text="[He]2sp2" />
 
-        <TextView
-            android:id="@+id/standard_state_value_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:tag="expanded_detail"
-            android:text="@{element.standardStyle}"
-            app:layout_constraintBaseline_toBaselineOf="@+id/standard_state_textView"
-            app:layout_constraintStart_toStartOf="@+id/center_guideline"
-            tools:text="Solid" />
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/top_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="element_electron_textView,electron_textView"
+                tools:layout_editor_absoluteY="300dp" />
 
-        <TextView
-            android:id="@+id/electronegativity_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/common_expanded_value_margin_top"
-            android:text="@string/electronegativity"
-            app:layout_constraintStart_toStartOf="@+id/left_guideline"
-            app:layout_constraintTop_toBottomOf="@+id/standard_state_textView" />
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/expanded_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids=",boiling_point_textView,electronegativity_value_textView,density_textView,boiling_point_value_textView,melting_point_value_textView,electronegativity_textView,melting_point_textView,atomic_radius_textView,ionization_energy_textView,density_value_textView,ionization_energy_value_textView,atomic_radius_value_textView,standard_state_value_textView,electron_affinity_textView,electron_affinity_value_textView,standard_state_textView" />
 
-        <TextView
-            android:id="@+id/electronegativity_value_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{element.electronegativity}"
-            app:layout_constraintBaseline_toBaselineOf="@+id/electronegativity_textView"
-            app:layout_constraintStart_toStartOf="@+id/center_guideline"
-            tools:text="1.9" />
+            <TextView
+                android:id="@+id/standard_state_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/expanded_detail_margin_top"
+                android:tag="expanded_detail"
+                android:text="@string/standard_state"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toTopOf="@+id/bottom_guideline" />
 
-        <TextView
-            android:id="@+id/atomic_radius_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/common_expanded_value_margin_top"
-            android:text="@string/atomic_radius"
-            app:layout_constraintStart_toStartOf="@+id/left_guideline"
-            app:layout_constraintTop_toBottomOf="@+id/electronegativity_textView" />
+            <TextView
+                android:id="@+id/standard_state_value_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="expanded_detail"
+                android:text="@{element.standardStyle}"
+                app:layout_constraintBaseline_toBaselineOf="@+id/standard_state_textView"
+                app:layout_constraintStart_toStartOf="@+id/center_guideline"
+                tools:text="Solid" />
 
-        <TextView
-            android:id="@+id/atomic_radius_value_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{element.atomicRadius}"
-            app:layout_constraintBaseline_toBaselineOf="@+id/atomic_radius_textView"
-            app:layout_constraintStart_toStartOf="@+id/center_guideline"
-            tools:text="217 pm" />
+            <TextView
+                android:id="@+id/electronegativity_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_expanded_value_margin_top"
+                android:text="@string/electronegativity"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/standard_state_textView" />
 
-        <TextView
-            android:id="@+id/ionization_energy_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/common_expanded_value_margin_top"
-            android:text="@string/ionization_energy"
-            app:layout_constraintStart_toStartOf="@+id/left_guideline"
-            app:layout_constraintTop_toBottomOf="@+id/atomic_radius_textView" />
+            <TextView
+                android:id="@+id/electronegativity_value_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{element.electronegativity}"
+                app:layout_constraintBaseline_toBaselineOf="@+id/electronegativity_textView"
+                app:layout_constraintStart_toStartOf="@+id/center_guideline"
+                tools:text="1.9" />
 
-        <TextView
-            android:id="@+id/ionization_energy_value_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{element.ionizationEnergy}"
-            app:layout_constraintBaseline_toBaselineOf="@+id/ionization_energy_textView"
-            app:layout_constraintStart_toStartOf="@+id/center_guideline"
-            tools:text="7.88 eV" />
+            <TextView
+                android:id="@+id/atomic_radius_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_expanded_value_margin_top"
+                android:text="@string/atomic_radius"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/electronegativity_textView" />
 
-        <TextView
-            android:id="@+id/electron_affinity_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/common_expanded_value_margin_top"
-            android:text="@string/electron_affinity"
-            app:layout_constraintStart_toStartOf="@+id/left_guideline"
-            app:layout_constraintTop_toBottomOf="@+id/ionization_energy_textView" />
+            <TextView
+                android:id="@+id/atomic_radius_value_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{element.atomicRadius}"
+                app:layout_constraintBaseline_toBaselineOf="@+id/atomic_radius_textView"
+                app:layout_constraintStart_toStartOf="@+id/center_guideline"
+                tools:text="217 pm" />
 
-        <TextView
-            android:id="@+id/electron_affinity_value_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{element.electronAffinity}"
-            app:layout_constraintBaseline_toBaselineOf="@+id/electron_affinity_textView"
-            app:layout_constraintStart_toStartOf="@+id/center_guideline"
-            tools:text="0.15 eV" />
+            <TextView
+                android:id="@+id/ionization_energy_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_expanded_value_margin_top"
+                android:text="@string/ionization_energy"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/atomic_radius_textView" />
 
-        <TextView
-            android:id="@+id/melting_point_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/common_expanded_value_margin_top"
-            android:text="@string/melting_point"
-            app:layout_constraintStart_toStartOf="@+id/left_guideline"
-            app:layout_constraintTop_toBottomOf="@+id/electron_affinity_textView" />
+            <TextView
+                android:id="@+id/ionization_energy_value_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{element.ionizationEnergy}"
+                app:layout_constraintBaseline_toBaselineOf="@+id/ionization_energy_textView"
+                app:layout_constraintStart_toStartOf="@+id/center_guideline"
+                tools:text="7.88 eV" />
 
-        <TextView
-            android:id="@+id/melting_point_value_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{element.meltingPoint}"
-            app:layout_constraintBaseline_toBaselineOf="@+id/melting_point_textView"
-            app:layout_constraintStart_toStartOf="@+id/center_guideline"
-            tools:text="3459 K" />
+            <TextView
+                android:id="@+id/electron_affinity_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_expanded_value_margin_top"
+                android:text="@string/electron_affinity"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/ionization_energy_textView" />
 
-        <TextView
-            android:id="@+id/boiling_point_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/common_expanded_value_margin_top"
-            android:text="@string/boiling_point"
-            app:layout_constraintStart_toStartOf="@+id/left_guideline"
-            app:layout_constraintTop_toBottomOf="@+id/melting_point_textView" />
+            <TextView
+                android:id="@+id/electron_affinity_value_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{element.electronAffinity}"
+                app:layout_constraintBaseline_toBaselineOf="@+id/electron_affinity_textView"
+                app:layout_constraintStart_toStartOf="@+id/center_guideline"
+                tools:text="0.15 eV" />
 
-        <TextView
-            android:id="@+id/boiling_point_value_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{element.boilingPoint}"
-            app:layout_constraintBaseline_toBaselineOf="@+id/boiling_point_textView"
-            app:layout_constraintStart_toStartOf="@+id/center_guideline"
-            tools:text="5869 K" />
+            <TextView
+                android:id="@+id/melting_point_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_expanded_value_margin_top"
+                android:text="@string/melting_point"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/electron_affinity_textView" />
 
-        <TextView
-            android:id="@+id/density_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/common_expanded_value_margin_top"
-            android:text="@string/density"
-            app:layout_constraintStart_toStartOf="@+id/left_guideline"
-            app:layout_constraintTop_toBottomOf="@+id/boiling_point_textView" />
+            <TextView
+                android:id="@+id/melting_point_value_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{element.meltingPoint}"
+                app:layout_constraintBaseline_toBaselineOf="@+id/melting_point_textView"
+                app:layout_constraintStart_toStartOf="@+id/center_guideline"
+                tools:text="3459 K" />
 
-        <TextView
-            android:id="@+id/density_value_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{element.density}"
-            app:layout_constraintBaseline_toBaselineOf="@+id/density_textView"
-            app:layout_constraintStart_toStartOf="@+id/center_guideline"
-            tools:text="20.8 g/cm³" />
+            <TextView
+                android:id="@+id/boiling_point_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_expanded_value_margin_top"
+                android:text="@string/boiling_point"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/melting_point_textView" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/bottom_guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="@dimen/image_bottom_guideline" />
+            <TextView
+                android:id="@+id/boiling_point_value_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{element.boilingPoint}"
+                app:layout_constraintBaseline_toBaselineOf="@+id/boiling_point_textView"
+                app:layout_constraintStart_toStartOf="@+id/center_guideline"
+                tools:text="5869 K" />
 
-        <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/bottom_barrier"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:barrierDirection="top"
-            app:constraint_referenced_ids="standard_state_textView,standard_state_value_textView"
-            tools:layout_editor_absoluteX="25dp" />
+            <TextView
+                android:id="@+id/density_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_expanded_value_margin_top"
+                android:text="@string/density"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/boiling_point_textView" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/center_guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="@dimen/middle_guideline" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/density_value_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{element.density}"
+                app:layout_constraintBaseline_toBaselineOf="@+id/density_textView"
+                app:layout_constraintStart_toStartOf="@+id/center_guideline"
+                tools:text="20.8 g/cm³" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/bottom_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/image_bottom_guideline" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/bottom_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="top"
+                app:constraint_referenced_ids="standard_state_textView,standard_state_value_textView"
+                tools:layout_editor_absoluteX="25dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/center_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/middle_guideline" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>

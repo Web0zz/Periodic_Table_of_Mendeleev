@@ -2,14 +2,10 @@ package com.web0zz.periodic_table_of_mendeleev.screen.splash
 
 import android.os.CountDownTimer
 import com.web0zz.periodic_table_of_mendeleev.MainActivity
-import com.web0zz.periodic_table_of_mendeleev.R
 import com.web0zz.periodic_table_of_mendeleev.base.BaseFragment
 import com.web0zz.periodic_table_of_mendeleev.databinding.FragmentSplashBinding
 
-
-class SplashFragment : BaseFragment<FragmentSplashBinding>() {
-    override fun getLayoutId() = R.layout.fragment_splash
-
+class SplashFragment : BaseFragment<FragmentSplashBinding>(FragmentSplashBinding::inflate) {
     override fun resumeUi() = (requireActivity() as MainActivity).supportActionBar!!.hide()
 
     override fun stopUi() = (requireActivity() as MainActivity).supportActionBar!!.show()

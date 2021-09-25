@@ -4,7 +4,7 @@ sealed class Item {
     abstract fun getType(): Int
 
     enum class Type {
-        NUMBER,
+        INDEX_NUMBER,
         ELEMENT,
         EMPTY
     }

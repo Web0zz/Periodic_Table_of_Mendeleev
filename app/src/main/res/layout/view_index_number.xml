@@ -6,24 +6,24 @@
     <data>
 
         <variable
-            name="lineNumber"
-            type="com.web0zz.periodic_table_of_mendeleev.data.model.Number" />
+            name="indexNumber"
+            type="com.web0zz.periodic_table_of_mendeleev.data.model.IndexNumber" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="@dimen/box_width"
-        android:layout_height="@dimen/box_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@color/transparent_background">
 
         <TextView
             android:id="@+id/lineNumber_textView"
-            customHeight="@{lineNumber.isRow ? @dimen/row_number_height : @dimen/column_number_height}"
-            customWidth="@{lineNumber.isRow ? @dimen/row_number_width : @dimen/column_number_with}"
+            customHeight="@{indexNumber.isRow ? @dimen/row_number_height : @dimen/column_number_height}"
+            customWidth="@{indexNumber.isRow ? @dimen/row_number_width : @dimen/column_number_with}"
             android:layout_width="@dimen/row_number_width"
             android:layout_height="@dimen/column_number_with"
             android:background="@color/transparent_light_background"
             android:gravity="center"
-            android:text="@{lineNumber.number}"
+            android:text="@{indexNumber.indexNo}"
             android:textColor="@color/white"
             android:textSize="@dimen/number_size"
             app:layout_constraintBottom_toBottomOf="parent"

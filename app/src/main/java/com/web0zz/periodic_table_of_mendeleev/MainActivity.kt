@@ -13,24 +13,26 @@ import com.web0zz.periodic_table_of_mendeleev.util.TransactionUtil.makeTransacti
 class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun getViewBinding() = ActivityMainBinding.inflate(layoutInflater)
 
-    private lateinit var splashFragment: SplashFragment
     private lateinit var homeFragment: HomeFragment
 
     override fun initUi() {
         setSupportActionBar(activityBinding.myToolbar)
 
+        initSplash()
+    }
+
+    private fun initSplash() {
         makeTransaction {
-            this.add(
+            this.replace(
                 activityBinding.mainFrameLayout.id,
-                SplashFragment.newInstance().also { splashFragment = it }
+                SplashFragment.newInstance()
             )
         }
     }
 
     fun initHome() {
         makeTransaction {
-            this.remove(splashFragment)
-            this.add(
+            this.replace(
                 activityBinding.mainFrameLayout.id,
                 HomeFragment.newInstance().also { homeFragment = it }
             )

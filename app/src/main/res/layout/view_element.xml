@@ -18,7 +18,6 @@
         android:layout_height="@dimen/box_height"
         tools:background="@color/light_background">
 
-
         <TextView
             android:id="@+id/element_number_textView"
             textColorId="@{element.colorText}"
@@ -39,26 +38,32 @@
             android:layout_height="wrap_content"
             android:text="@{element.symbol}"
             android:textSize="@dimen/small_element_symbol_text"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/element_middle_guideline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             tools:text="Zn"
             tools:textColor="@color/white" />
 
         <TextView
             android:id="@+id/element_content_textView"
             textColorId="@{element.colorText}"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
             android:text="@{element.contentText}"
             android:textAlignment="center"
             android:textSize="@dimen/small_element_title_text"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/symbol_textView"
-            app:layout_constraintStart_toStartOf="@+id/symbol_textView"
-            app:layout_constraintTop_toBottomOf="@+id/symbol_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/element_middle_guideline"
             tools:text="Post-Transition Metal"
             tools:textColor="@color/white" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/element_middle_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
