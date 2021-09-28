@@ -25,7 +25,7 @@ object ViewBinding {
 
     @JvmStatic
     @BindingAdapter("backgroundColorId")
-    fun View.setTextColorValue(@ColorRes colorId: Int) {
+    fun View.setBackgroundColorValue(@ColorRes colorId: Int) {
         if (colorId == 0) return
         setBackgroundColor(ContextCompat.getColor(context, colorId))
     }

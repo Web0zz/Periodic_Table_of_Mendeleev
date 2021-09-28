@@ -16,6 +16,7 @@
         backgroundColorId="@{element.colorBackground}"
         android:layout_width="@dimen/box_width"
         android:layout_height="@dimen/box_height"
+        android:layout_margin="@dimen/element_item_margin"
         tools:background="@color/light_background">
 
         <TextView
@@ -55,7 +56,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/element_middle_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/element_middle_guideline"
             tools:text="Post-Transition Metal"
             tools:textColor="@color/white" />
 
@@ -64,6 +65,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.6" />
+            app:layout_constraintGuide_percent="0.5" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

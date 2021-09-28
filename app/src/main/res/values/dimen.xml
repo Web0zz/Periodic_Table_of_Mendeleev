@@ -22,10 +22,9 @@
 
     <!--Text Size Dimen-->
     <dimen name="number_size">18sp</dimen>
-    <dimen name="small_element_number_text">11sp</dimen>
-    <dimen name="small_element_title_text">8sp</dimen>
+    <dimen name="small_element_number_text">10sp</dimen>
+    <dimen name="small_element_title_text">9sp</dimen>
     <dimen name="small_element_symbol_text">20sp</dimen>
-
 
     <dimen name="detail_number_text">22sp</dimen>
     <dimen name="symbol_text">56sp</dimen>
@@ -43,6 +42,7 @@
     <dimen name="common_value_margin_top">3dp</dimen>
     <dimen name="expanded_detail_margin_top">10dp</dimen>
     <dimen name="common_expanded_value_margin_top">6dp</dimen>
+    <dimen name="element_item_margin">0.8dp</dimen>
 
     <!--Padding Dimen-->
     <dimen name="detail_bottom_padding">10dp</dimen>

@@ -23,7 +23,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         val data = DummyData
 
         data.apply {
-            initGroups(columnList)
+            initPeriods(columnList)
             initPeriodicTable(listAdapter)
         }
 
@@ -32,11 +32,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         elementControl.displayElementsBySelectedProperties(DisplayType.CHEMICAL_GROUP)
     }
 
-    private fun initGroups(data: List<Item>) {
+    private fun initPeriods(data: List<Item>) {
         fragmentDataBinding.periodsRecyclerView.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-            animation = AnimationUtils.loadAnimation(context, R.anim.recyclerview_anim)
+            animation =
+                AnimationUtils.loadAnimation(context, R.anim.recyclerview_element_table_anim)
             adapter = RecyclerAdapter(data) {}
                 .apply { recyclerAdapter = this }
         }
@@ -46,7 +47,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         fragmentDataBinding.periodicTableRecyclerView.apply {
             setHasFixedSize(true)
             layoutManager = GridLayoutManager(context, 11, GridLayoutManager.HORIZONTAL, false)
-            animation = AnimationUtils.loadAnimation(context, R.anim.recyclerview_anim)
+            animation =
+                AnimationUtils.loadAnimation(context, R.anim.recyclerview_element_table_anim)
             adapter = RecyclerAdapter(data) { element ->
                 onClickElement(element)
             }.apply { recyclerAdapter = this }
